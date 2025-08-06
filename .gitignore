@@ -1,2 +1,4 @@
 models/
 .env
+IRLforLLM
+wandb
