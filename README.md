@@ -1,6 +1,19 @@
 # Inverse Reinforcement Learning for Large Language Models
 
-This repository implements **Inverse Reinforcement Learning (IRL)** for extracting reward models from **Reinforcement Learning from Human Feedback (RLHF)**-fine-tuned Large Language Models (LLMs). The project includes scripts for fine-tuning LLMs, creating IRL datasets, and applying Max-Margin IRL.
+This repository implements **Inverse Reinforcement Learning (IRL)** for extracting reward models from **Reinforcement Learning from Human Feedback (RLHF)**-fine-tuned Large Language Models (LLMs). The project includes scripts for fine-tuning LLMs, creating IRL datasets, and applying Max-Margin IRL. If you find this code helpful, please cite our paper "Insights from the Inverse: Reconstructing LLM Training Goals Through Inverse Reinforcement Learning" using the following:
+
+## 📚 Citation
+```bibtex
+@article{joselowitz2024insights,
+  title={Insights from the inverse: Reconstructing LLM Training Goals through Inverse RL},
+  author={Joselowitz, Jared and Jagota, Arjun and Bou, Matthieu and Patel, Nyal and Krishna, Satyapriya and Parbhoo, Sonali},
+  journal={In Proceedings of 2nd Conference on Language Modelling},
+  pages={arXiv--2410},
+  year={2025},
+  url={https://arxiv.org/abs/2410.12491}
+}
+```
+
 
 ## Environment Setup
 
