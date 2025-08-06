@@ -1,0 +1,26 @@
+true_rm : s-nlp/roberta_toxicity_classifier
+learn_rm_size : &learn_rm_size 410m
+learn_rm : &learn_rm EleutherAI/pythia-
+from_checkpoint: false # false or path/to/ckpt
+learn_rm_path: saved_models/learned_rm_ #${learn_rm}_${true_rm}.pt
+policy_lm : jaredjoss/pythia-410m-roberta-lr_8e7-kl_01-steps_12000-rlhf-model
+org_lm : EleutherAI/pythia-410m
+evaluation_dataset: jaredjoss/jigsaw-long-2000
+data_name: jaredjoss/jigsaw-long-2000
+non_toxic_rm: *learn_rm
+candidate_policies:
+- jaredjoss/pythia-410m-roberta-lr_8e7-kl_01-steps_12000-rlhf-model
+- *learn_rm
+candidate_policy_paths:
+- jaredjoss/jaredjoss-jigsaw-long-2000_410M_non_toxic
+- jaredjoss/jaredjoss-jigsaw-long-2000_410M_toxic
+create_dataset : false
+correlation_threshold: false # false or {0, 1}
+training:
+  evaluation_metric: mse
+  sample_size : 200
+  loss_type: max_margin
+  n_epochs: 10
+  optimizer: adam
+  lr: 0.00001
+  reward_func_mode: logit # logit or contrastive
