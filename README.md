@@ -27,7 +27,7 @@ conda activate IRLforLLM
 
 ### Step 2: Clone this repository
 ```bash
-git clone git@github.com:JaredJoss/irl_for_llms.git
+git clone git@github.com:ai4ai-lab/irl_for_llms.git
 cd irl_for_llms
 ```
 
