@@ -6,7 +6,7 @@ This repository implements **Inverse Reinforcement Learning (IRL)** for extracti
 ```bibtex
 @article{joselowitz2024insights,
   title={Insights from the inverse: Reconstructing LLM Training Goals through Inverse RL},
-  author={Joselowitz, Jared and Jagota, Arjun and Bou, Matthieu and Patel, Nyal and Krishna, Satyapriya and Parbhoo, Sonali},
+  author={Joselowitz, Jared and Majumdar, Ritam and Jagota, Arjun and Bou, Matthieu and Patel, Nyal and Krishna, Satyapriya and Parbhoo, Sonali},
   journal={In Proceedings of 2nd Conference on Language Modelling},
   pages={arXiv--2410},
   year={2025},
