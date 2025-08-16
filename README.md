@@ -18,12 +18,21 @@ This repository implements **Inverse Reinforcement Learning (IRL)** for extracti
 - Accepted at The Conference on Language Modeling (COLM) 2025
 
 ## Abstract
+
+<p align="center">
+  <img src="images/overview.png" alt="Project Overview" width="600" />
+</p>
+
 Large language models (LLMs) trained with Reinforcement Learning from Human Feedback (RLHF) have demonstrated remarkable capabilities, but their underlying reward functions and decision-making processes remain opaque. This paper introduces a novel approach to interpreting LLMs by applying inverse reinforcement learning (IRL) to recover their implicit reward functions. We conduct experiments on toxicity-aligned LLMs of varying sizes, extracting reward models that achieve up to 85\% accuracy in predicting human preferences. Our analysis reveals key insights into the non-identifiability of reward functions, the relationship between model size and interpretability, and potential pitfalls in the RLHF process. We demonstrate that IRL-derived reward models can be used to fine-tune new LLMs, resulting in comparable or improved performance on toxicity benchmarks. This work provides a new lens for understanding and improving LLM alignment, with implications for the responsible development and deployment of these powerful systems.
 
 
 ## Environment Setup
 
 To replicate the environment used for training, follow the steps below:
+
+### Requirements
+- Python 3.11.7
+- CUDA-compatible GPU (required for RLHF training)
 
 ### Step 1: Create and activate a virtual environment
 ```bash
