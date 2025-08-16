@@ -14,7 +14,7 @@ This repository implements **Inverse Reinforcement Learning (IRL)** for extracti
 }
 ```
 
-- This is the joint work of Jared Joselowitz, Ritam Majumdar, Arjun Jagota, Matthieu Bou, Nyal Patel, Satyapriya Krishna, Sonali Parbhoo
+- This is the joint work of [Jared Joselowitz](https://github.com/JaredJoss), [Ritam Majumdar](https://github.com/Ritam-M), [Arjun Jagota](https://github.com/ajagota7), [Matthieu Bou](https://github.com/Matthieu6), [Nyal Patel](https://github.com/Nyal101), [Satyapriya Krishna](https://github.com/y12uc231), [Sonali Parbhoo](https://github.com/sonaliparbhoo)
 - Accepted at The Conference on Language Modeling (COLM) 2025
 
 ## Abstract
