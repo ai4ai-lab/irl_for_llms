@@ -80,7 +80,7 @@ def get_config(model_size, default_config):
         # Following params from https://wandb.ai/eleutherai/pythia-rlhf/runs/do2vbz2o
         default_config.train.batch_size = 16 
         default_config.train.seq_length = 1024
-        default_config.train.total_steps = 5000 
+        default_config.train.total_steps = 1 
         default_config.model.model_path = "lomahony/eleuther-pythia70m-hh-sft"
         default_config.model.num_layers_unfrozen = 4
         default_config.train.checkpoint_dir = "checkpoints/ppo_hh/pythia-70m/"
@@ -244,7 +244,7 @@ def main(default_config, hparams={}):
         final_rewards = [i-j for i, j in zip(rewards, original_rewards)] 
         return final_rewards
 
-    trainer, eval_stats = trlx.train(
+    trainer = trlx.train(
         reward_fn=reward_fn,
         prompts=prompts,
         eval_prompts=eval_prompts,
@@ -253,7 +253,7 @@ def main(default_config, hparams={}):
 
     if trainer.accelerator.is_main_process:
         trainer.accelerator.print("\n"*20)
-        trainer.accelerator.print(eval_stats["reward/mean"])
+        # trainer.accelerator.print(eval_stats["reward/mean"])
 
     print("Saving:")
     folder_name = './output/roberta_tox_classifier_custom_jigsaw_70'
