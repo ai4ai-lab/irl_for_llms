@@ -36,8 +36,8 @@ To replicate the environment used for training, follow the steps below:
 
 ### Step 1: Create and activate a virtual environment
 ```bash
-conda create --name IRLforLLM python=3.11.7
-conda activate IRLforLLM
+python -m venv IRLforLLM
+source IRLforLLM/bin/activate
 ```
 
 ### Step 2: Clone this repository
@@ -51,18 +51,18 @@ cd irl_for_llms
 pip install -r requirements.txt
 ```
 
-To fine-tune LLMs using RLHF, you'll need the trlx library. Follow the instructions on the official TRLx GitHub page to install it:
-
-[https://github.com/CarperAI/trlx](https://github.com/CarperAI/trlx)
-
-
 ## Usage
 
 ### Fine-Tuning an LLM using RLHF
 To fine-tune a large language model using RLHF, use the following command:
+
 ```bash
 python src/train_rlhf.py
 ```
+
+#### Example Notebook for RLHF
+For an example of RLHF on a 70 million parameter Pythia model, refer to the Jupyter notebook `src/train_rlhf_example.ipynb`. This notebook provides a step-by-step guide to implementing RLHF on this model size.
+
 
 ### Generate IRL Demonstrations
 Before running the IRL algorithm, you need to generate demonstrations using the original and RLHF-trained model. Run the following script to create the necessary dataset for IRL:
